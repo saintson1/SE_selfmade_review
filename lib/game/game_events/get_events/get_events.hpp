@@ -12,7 +12,6 @@
 
 #include "get_count_event/get_count_event.hpp"
 #include "get_height_event/get_height_event.hpp"
-// #include "get_result_event/get_result_event.hpp"
 #include "get_width_event/get_width_event.hpp"
 
 namespace battleship {
@@ -26,8 +25,6 @@ std::shared_ptr<EventBase> GetEventsCreate(const std::string& add_input) {
       return std::shared_ptr<GetHeight>{new GetHeight{}};
     } else if (add_input == "count") {
       return std::shared_ptr<GetCount>{new GetCount{}};
-    // } else if (add_input == "result") {
-
     } else {
       return std::shared_ptr<InvalidEvent>{new InvalidEvent{}};
     }

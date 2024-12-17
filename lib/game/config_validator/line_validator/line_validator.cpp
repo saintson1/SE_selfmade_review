@@ -227,7 +227,6 @@ ShipContainerType LineValidator::Place() {
               block_lenght -= less_type + 1;
               Ship ship(x_count, y_count, true, less_type);
               ship_cont.Add({ship.CreateCoordinates(), ship});
-              // --ship_counts_[less_type - 1];
             } else {
               break;
             }
@@ -241,7 +240,6 @@ ShipContainerType LineValidator::Place() {
         }
         Ship ship(x_count, y_count, true, ship_type);
         ship_cont.Add({ship.CreateCoordinates(), ship});
-        // --ship_counts_[ship_type - 1];
       }
     }
   }
